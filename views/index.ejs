@@ -1,0 +1,20 @@
+<div class="author">
+  <h1 class="author__heading">Hi, I am Alessio</h1>
+  <p class="author__body">Web developer</p>
+</div>
+
+<section class="articles">
+  <h2 class="articles__heading">Messages for me</h2>
+  <ul class="article-ul">
+    <% data.forEach(item => { %>
+    <li>
+      <a href="/message/<%= item._id %>">
+        <span><%= item.title %></span>
+        <span class="article-list__date"
+          ><%= item.createdAt.toDateString() %></span
+        >
+      </a>
+    </li>
+    <% }) %>
+  </ul>
+</section>

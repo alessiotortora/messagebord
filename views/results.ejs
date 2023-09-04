@@ -1,0 +1,14 @@
+<h1>Search results</h1>
+
+<ul class="article-ul">
+    <% data.forEach(item => { %>
+    <li>
+      <a href="/message/<%= item._id %>">
+        <span><%= item.title %></span>
+        <span class="article-list__date"
+          ><%= item.createdAt.toDateString() %></span
+        >
+      </a>
+    </li>
+    <% }) %>
+  </ul>
